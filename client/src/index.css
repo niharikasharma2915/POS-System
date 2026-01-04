@@ -1,0 +1,38 @@
+/* ===============================
+   GLOBAL THEME (PURPLE)
+================================ */
+:root {
+    --purple: #7c3aed;
+    --purple-hover: #6d28d9;
+    --purple-active: #5b21b6;
+    --purple-light: #5b21b6;
+}
+
+/* ===============================
+   PURPLE BUTTON (ADD BUTTONS)
+================================ */
+.btn-purple {
+    background-color: var(--purple);
+    color: #5b21b6;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.btn-purple:hover {
+    background-color: var(--purple-hover);
+    color: #fffeff;
+    box-shadow: 0 4px 10px rgba(124, 58, 237, 0.3);
+}
+
+.btn-purple:active {
+    background-color: var(--purple-active);
+}
+
+.btn-purple:disabled {
+    background-color: #745cd4;
+    cursor: not-allowed;
+    box-shadow: none;
+}

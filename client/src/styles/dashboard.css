@@ -1,0 +1,286 @@
+/* ==============================
+   MAIN LAYOUT
+============================== */
+
+.dashboard-layout {
+    display: flex;
+    min-height: 100vh;
+    background-color: hsl(0, 33%, 97%);
+}
+
+/* ==============================
+   SIDEBAR
+============================== */
+
+.sidebar {
+    width: 240px;
+    background-color: #ffffff;
+    border-right: 1px solid #02102c;
+    padding: 20px 12px;
+    transition: width 0.3s ease;
+}
+
+.sidebar.collapsed {
+    width: 70px;
+}
+
+.sidebar-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #7c3aed;
+    margin-bottom: 25px;
+    padding-left: 10px;
+}
+
+/* SIDEBAR LINKS */
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 10px;
+    color: #374151;
+    text-decoration: none;
+    margin-bottom: 8px;
+    font-weight: 500;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-link i {
+    font-size: 18px;
+    min-width: 20px;
+}
+
+.sidebar-link span {
+    white-space: nowrap;
+}
+
+/* HOVER + ACTIVE */
+.sidebar-link:hover,
+.sidebar-link.active {
+    background-color: #fafafa;
+    color: #7c3aed;
+}
+
+/* COLLAPSED STATE */
+.sidebar.collapsed span {
+    display: none;
+}
+
+/* ==============================
+   MAIN AREA
+============================== */
+
+.dashboard-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+/* ==============================
+   TOPBAR
+============================== */
+
+.topbar {
+    height: 64px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.topbar h4,
+.topbar h5 {
+    margin: 0;
+    font-weight: 600;
+    color: #111827;
+}
+
+/* ==============================
+   CONTENT AREA
+============================== */
+
+.dashboard-content {
+    flex: 1;
+    padding: 24px;
+    background-color: #ffffff;
+}
+
+/* ==============================
+   WELCOME SECTION
+============================== */
+
+.dashboard-welcome h2 {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.dashboard-welcome p {
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* ==============================
+   DASHBOARD CARDS
+============================== */
+
+.dashboard-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-4px);
+}
+
+.dashboard-card span {
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.dashboard-card h3 {
+    margin-top: 8px;
+    font-weight: 600;
+    color: #111827;
+}
+
+/* STATUS COLORS */
+.dashboard-card.success h3 {
+    color: #16a34a;
+}
+
+.dashboard-card.danger h3 {
+    color: #dc2626;
+}
+
+/* ==============================
+   TABLE STYLING
+============================== */
+
+table {
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+table th {
+    background-color: #f3f4f6;
+    color: #374151;
+    font-weight: 600;
+}
+
+table td {
+    vertical-align: middle;
+}
+
+/* ==============================
+   BUTTONS
+============================== */
+
+.btn-primary {
+    background-color: #7c3aed;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #6d28d9;
+}
+
+/* ==============================
+   DARK MODE SUPPORT
+============================== */
+
+body.dark {
+    background-color: #0f172a;
+    color: #e5e7eb;
+}
+
+body.dark .dashboard-content {
+    background-color: #020617;
+}
+
+body.dark .sidebar {
+    background-color: #020617;
+    border-color: #020617;
+}
+
+body.dark .sidebar-link {
+    color: #8962c7;
+}
+
+body.dark .sidebar-link:hover,
+body.dark .sidebar-link.active {
+    background-color: #312e81;
+    color: #e0e7ff;
+}
+
+body.dark .topbar {
+    background-color: #020617;
+    border-color: #020617;
+}
+
+body.dark .dashboard-card {
+    background-color: #1e293b;
+    box-shadow: none;
+}
+
+body.dark table {
+    background-color: #020617;
+    color: #e5e7eb;
+}
+
+/* ==============================
+   CATEGORY FILTER BUTTONS
+============================== */
+
+.category-filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+    color: #374151;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.filter-btn:hover {
+    background: #ede9fe;
+    color: #7c3aed;
+}
+
+.filter-btn.active {
+    background: #7c3aed;
+    color: #ffffff;
+    border-color: #7c3aed;
+}
+
+/* ==============================
+   ADD BUTTON (PURPLE)
+============================== */
+
+.add-btn {
+    background-color: #7c3aed;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-weight: 500;
+    transition: background 0.2s ease;
+}
+
+.add-btn:hover {
+    background-color: #5c0be0;
+}
